@@ -8,12 +8,6 @@
           <polyline points="12 6 12 12 16 14"></polyline>
         </svg>
         {{ i18n "readingTime" .Page.ReadingTime }}
-
-        {{ if .IsTranslated }} | {{ i18n "postAvailable" }}
-          {{ range .Translations }}
-              <a href="{{ .Permalink }}"><span class="flag flag-icon flag-icon-{{ index $.Site.Data.langFlags (.Lang) }} flag-icon-squared"></span></a>
-          {{ end}}
-        {{ end }}
       </p>
     </div>
 
