@@ -3,8 +3,6 @@ title   = "Hello Friend NG"
 languageCode = "en-us"
 theme = "hello-friend-ng"
 
-PygmentsCodeFences = true
-PygmentsStyle = "monokai"
 
 paginate  = 10
 rssLimit  = 10  # Maximum number of items in the RSS feed.
@@ -36,8 +34,14 @@ disableHugoGeneratorInject = false
 [permalinks]
   posts = "/posts/:year/:month/:title/"
 
-[blackfriday]
-  hrefTargetBlank = true
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+  [markup.highlight]
+    style = "monokai"
+    lineNos = true
+    codeFences = true
 
 [taxonomies]
   tag      = "tags"

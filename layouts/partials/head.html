@@ -67,7 +67,7 @@
 {{- end }}
 
 <!-- Google Analytics internal template -->
-{{- if .Site.Config.Services.GoogleAnalytics.ID }}
+{{- if .Site.GoogleAnalytics }}
     {{ template "_internal/google_analytics.html" . }}
 {{- end }}
 
